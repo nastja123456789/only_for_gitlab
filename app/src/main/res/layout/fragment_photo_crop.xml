@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/light_blue"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    tools:context=".main_feature.presentation.photo_crop.PhotoCropFragment">
+
+    <RelativeLayout
+        android:id="@+id/rlContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:orientation="vertical"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:id="@+id/buttonsTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                >
+
+                <Button
+                    android:id="@+id/btnImageLeft"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Влево" />
+
+                <Button
+                    android:id="@+id/btnImageNewAlg"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Нов.алг" />
+
+                <Button
+                    android:id="@+id/btnImageRight"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Вправо" />
+
+            </LinearLayout>
+
+            <com.labters.documentscanner.DocumentScannerView
+                android:id="@+id/document_scanner"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:layout_weight="10" />
+
+            <LinearLayout
+                android:id="@+id/buttonsBottoms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                >
+
+            <Button
+                android:id="@+id/btnImageCrop"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Обрезать документ" />
+                <Button
+                    android:id="@+id/btnImageLight"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Увеличить яркость" />
+            <Button
+                android:id="@+id/btnImageClarity"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Увеличить четкость" />
+        </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/result_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:contentDescription="@null"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="100dp" />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

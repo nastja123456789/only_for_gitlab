@@ -1,0 +1,2 @@
+include ':app', ':documentscanner'
+rootProject.name = "464-project-watermarks"
